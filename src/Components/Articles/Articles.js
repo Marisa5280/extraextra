@@ -17,10 +17,12 @@ function ArticleCards({ articles }) {
   return articles.map((article) => {
     return (
       <Card
-        location={article.title}
+        image={article.urlToImage}
+        title={article.title}
         description={article.description}
-        id={article.id}
-        key={article.id}
+        date={article.publishedAt}
+        source={article.source.name}
+        key={article.publishedAt}
       />
     );
   });

@@ -1,10 +1,12 @@
 import "./Card.css";
 
-const Card = ({location, description}) => {
+const Card = ({ image, title, description, date}) => {
   return (
     <div className="card">
-      <h3>{location}</h3>
+      <img src={image}></img>
+      <h3>{title}</h3>
       <p>{description}</p>
+      <p>published: {date}</p>
     </div>
   )
 }

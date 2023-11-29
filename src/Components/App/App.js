@@ -17,8 +17,10 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">Extra! Extra!</header>
-      <p>The Headlines:</p>
+      <header className="App-header">
+        <h1>Extra! Extra!</h1>
+      </header>
+      <h2>The Headlines:</h2>
       {articles && <Articles articles={articles} />}
     </div>
   );
