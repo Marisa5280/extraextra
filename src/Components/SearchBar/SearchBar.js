@@ -1,11 +1,11 @@
 import { useState } from "react";
 import "./SearchBar.css";
-function SearchBar({ setSearchParam }) {
+function SearchBar({ setSearchParam, setArticles }) {
   const [search, setSearch] = useState(null);
 
   const handleSubmit = () => {
     setSearchParam(search);
-    // navigate to '/' on submit
+    setArticles(null);
   };
 
   return (

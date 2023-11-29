@@ -6,7 +6,7 @@ function Articles({ articles }) {
     <div>
       <h2>The Headlines:</h2>
       <div className="articles-container">
-        {!!articles.length ? (
+        {!!articles? (
           <ArticleCards articles={articles} />
         ) : (
           <h2>No articles found. Try again</h2>
@@ -26,7 +26,7 @@ function ArticleCards({ articles }) {
         content={article.content}
         date={article.publishedAt}
         source={article.source.name}
-        key={article.publishedAt}
+        key={`${article.publishedAt}-${article.source.name}`}
       />
     );
   });
